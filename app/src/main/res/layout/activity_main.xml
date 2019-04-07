@@ -14,7 +14,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout"/>
+            app:layout_constraintBottom_toTopOf="@+id/adder"/>
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -22,8 +22,10 @@
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            android:padding="10dp"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/linearLayout">
+            android:id="@+id/adder">
 
         <EditText
                 android:layout_width="match_parent"
@@ -65,5 +67,19 @@
         />
 
     </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="normal"
+            android:onClick="hideAway"
+            android:src="@drawable/ic_add_black_24dp"
+            android:tint="@android:color/white"
+            android:id="@+id/floatingActionButton"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
